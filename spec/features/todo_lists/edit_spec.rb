@@ -27,7 +27,7 @@ describe 'Editing todo lists' do
                      description: "New description"
 
 
-    todo_list.reload # Reload the page with new changes
+    todo_list.reload # Refresh todo_list object's attributes with info from database
 
     expect(page).to have_content("Todo list was successfully updated")
     expect(todo_list.title).to eq("New title")
